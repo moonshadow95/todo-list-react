@@ -6,11 +6,7 @@ import Header from './components/header';
 
 class App extends Component {
   state = {
-    todos: [
-      { id: 1, name: 'Coding', count: 0 },
-      { id: 2, name: 'Workout', count: 0 },
-      { id: 3, name: 'Play Guitar', count: 0 },
-    ],
+    todos: [],
   };
 
   handleAdd = (name) => {

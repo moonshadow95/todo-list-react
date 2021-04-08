@@ -73,6 +73,7 @@ header {
 .add-form {
   display: flex;
   margin-left: 1.5em;
+  margin-bottom: 1em;
 }
 
 .add-input {
@@ -103,7 +104,7 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  padding: 1em 2em;
+  padding: 0.5em 2em;
   width: 500px;
 }
 
