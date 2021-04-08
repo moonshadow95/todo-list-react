@@ -1,38 +1,169 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  font-family: 'Press Start 2P', 'Neo둥근모 Code', cursive;
+  color: #2c2c2c;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button,
+input {
+  font-family: 'Press Start 2P', 'Neo둥근모 Code', cursive;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes fire {
+  0% {
+    color: rgb(248, 50, 50);
+    transform: scale(1);
+  }
+  30% {
+    color: rgb(253, 57, 43);
+    transform: scale(1.1);
+  }
+  60% {
+    color: rgb(247, 163, 37);
+    transform: scale(0.9);
+  }
+  80% {
+    color: rgb(243, 74, 22);
+    transform: scale(1.1);
+  }
+  100% {
+    color: rgb(248, 50, 50);
+    transform: scale(1);
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header {
+  padding: 1.5em;
+}
+
+.header-icon {
+  font-size: 1.4rem;
+  margin-bottom: 0.3em;
+  color: rgb(248, 50, 50);
+  animation: fire 3000ms infinite;
+}
+
+.title {
+  font-size: 1.2rem;
+  padding: 0 0.5em;
+}
+
+.total-count {
+  display: block;
+  font-size: 1rem;
+  text-align: center;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(250, 50, 50);
+}
+
+.add-form {
+  display: flex;
+  margin-left: 1.5em;
+}
+
+.add-input {
+  width: 300px;
+  height: 25px;
+  font-size: 1rem;
+  font-weight: normal;
+  text-indent: 0.4em;
+}
+
+.add-button {
+  display: inline-block;
+  font-size: 0.9rem;
+  border: 1px solid #000;
+  border-radius: 6px;
+  margin-left: 0.5em;
+  padding: 0 0.7em;
+  transition: all 100ms ease-in;
+}
+
+.add-button:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 1em 2em;
+  width: 500px;
+}
+
+.todo-name__wrap {
+  display: flex;
+}
+
+.todo-name {
+  display: inline-block;
+  line-height: 35px;
+  font-size: 1.5rem;
+}
+
+.todo-button {
+  display: inline-block;
+  font-size: 1.4rem;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #000;
+  border-radius: 6px;
+  transition: all 100ms ease-in;
+  margin-right: 0.4em;
+}
+
+.todo-count {
+  display: block;
+  margin-left: 0.2em;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: rgb(218, 218, 218);
+}
+
+.todo-plus,
+.todo-minus {
+  color: rgb(88, 88, 88);
+}
+
+.todo-plus:hover,
+.todo-minus:hover {
+  background-color: rgb(88, 88, 88);
+  color: rgb(255, 255, 255);
+}
+
+.todo-delete {
+  color: rgb(255, 0, 0);
+}
+
+.todo-delete:hover {
+  color: #fff;
+  background-color: rgb(255, 0, 0);
+}
+
+.reset {
+  color: #fff;
+  background-color: red;
+  padding: 0.4em 0.8em;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin: 0 0 2em 2em;
 }
